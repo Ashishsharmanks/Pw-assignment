@@ -38,7 +38,7 @@ select * from actor;
 select * from customer;
 
 -- Q4-- List different countries. 
-select country from country;
+Select distinct country from country;
 
 -- Q5-- Display all active customers.
 select * from customer where active=1;
@@ -50,7 +50,7 @@ select rental_id,customer_id from rental where customer_id=1;
 select title,rental_duration from film where rental_duration>5;
  
 -- Q8-- List the total number of films whose replacement cost is greater than $15 and less than $20. 
-select title,replacement_cost from film where replacement_cost between 15 and 20;
+Select count(title) as num_of_films from film where replacement_cost> 15 and replacement_cost<20;
 
 -- Q9-- Display the count of unique first names of actors. 
 select count(distinct first_name) from actor;
