@@ -1,3 +1,4 @@
+Use mavenmovies;
 -- 1- **Rank the customers based on the total amount they've spent on rentals.**
    Select customer_id,sum(amount),rank() over (order by sum(amount) desc) as cust_rank from payment group by customer_id;
    
